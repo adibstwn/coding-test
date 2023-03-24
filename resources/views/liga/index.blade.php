@@ -4,9 +4,9 @@
     <br />
     <div class="d-flex justify-content-between">
         <p class="h2">Liga Tarkam Standings 22/23</p>
-        <div class="d-flex">
-            <a class="btn btn-success mb-2 mr-3" href="{{ url('liga/create') }}">Save Match</a>
-            <a class="btn btn-success mb-2" href="{{ url('multiple-match') }}">Save Multiple Match</a>
+        <div class="d-flex justify-content-between">
+            <a class="btn btn-success mb-2" href="{{ url('admin/create-match') }}">Save Match</a>
+            <a class="btn btn-success mb-2 ml-3" href="{{ url('admin/multiple-matches') }}">Save Multiple Match</a>
         </div>
     </div>
     <table class="table-bordered table text-center">

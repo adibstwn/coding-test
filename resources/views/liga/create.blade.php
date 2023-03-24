@@ -10,9 +10,9 @@
         @csrf
         <div>
             <div class="d-flex">
-                <div class="col-md-3 mt-2">
+                <div class="col-md-3 mt-3">
                     <label for="clubName">Home Club Name</label>
-                    <select name="home_club" class="custom-select  mb-1">
+                    <select name="home_club" class="form-select  mb-1">
                         <option selected value="">Select Club</option>
                         @foreach ($club as $key => $value)
                             <option value={{ $value->id }}>{{ $value->name }}</option>
@@ -22,10 +22,10 @@
                         <p class="text-danger small">{{ $msg }}</p>
                     @endforeach
                 </div>
-                <span class="mt-5">-</span>
-                <div class="col-md-3 mt-2">
+                <span class="mt-5 mx-2">-</span>
+                <div class="col-md-3 mt-3">
                     <label for="club">Away Club Name</label>
-                    <select name="away_club" class="custom-select  mb-1">
+                    <select name="away_club" class="form-select  mb-1">
                         <option selected value="">Select Club</option>
                         @foreach ($club as $key => $value)
                             <option value={{ $value->id }}>{{ $value->name }}</option>
@@ -35,21 +35,21 @@
                         <p class="text-danger small">{{ $msg }}</p>
                     @endforeach
                 </div>
-                <div class="col-3 mt-4 pt-3">
+                <div class="col-3 mt-4 pt-3 ml-3">
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <a class="btn btn-outline-dark" href="{{ url('liga') }}">Cancel</a>
                 </div>
             </div>
             <div class="d-flex">
-                <div class="col-md-3 mt-2">
+                <div class="col-md-3 mt-3">
                     <label for="skor">Home Score</label>
                     <input name="scoreClub0" type="text" class="form-control mb-1" id="skor">
                     @foreach ($errors->get('scoreClub0') as $msg)
                         <p class="text-danger small">{{ $msg }}</p>
                     @endforeach
                 </div>
-                <span class="mt-5">-</span>
-                <div class="col-md-3 mt-2">
+                <span class="mt-5 mx-2">-</span>
+                <div class="col-md-3 mt-3">
                     <label for="skor2">Away Score</label>
                     <input name="scoreClub1" type="text" class="form-control" id="skor2">
                     @foreach ($errors->get('scoreClub1') as $msg)
