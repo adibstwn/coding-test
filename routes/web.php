@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClubController;
 use App\Http\Controllers\LigaController;
+use App\Http\Controllers\MatchController;
 use App\Models\Club;
 use App\Models\Liga;
 use Illuminate\Support\Facades\Auth;
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::resource('club', ClubController::class);
 Route::resource('liga', LigaController::class);
+Route::resource('match', MatchController::class);
 
 Route::prefix('admin')->middleware(['isAdmin'])->group(function () {
     Route::get('/multiple-matches', function () {
@@ -33,9 +35,10 @@ Route::prefix('admin')->middleware(['isAdmin'])->group(function () {
             'club'
         ));
     });
-    Route::get('/create-match', [LigaController::class, 'create']);
+    Route::get('/save-match', [LigaController::class, 'create']);
     Route::post('/multiple-match', [LigaController::class, 'multipleMatch']);
     Route::get('/create-club', [ClubController::class, 'create']);
+    Route::get('/create-match', [MatchController::class, 'create']);
 });
 
 
