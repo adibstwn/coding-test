@@ -44,6 +44,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('liga') }}">Liga Data</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('match') }}">Match Data</a>
+                </li>
             </ul>
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->

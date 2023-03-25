@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "livewire/livewire": "^2.12",
-        "mckenziearts/laravel-notify": "^2.3"
+        "mckenziearts/laravel-notify": "^2.3",
+        "tu6ge/laravel-form-item": "^0.1.2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
